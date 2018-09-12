@@ -9,6 +9,7 @@ RUN apt-get install -y mumble-server=1.2.19-1~ppa4~xenial1
 # Add the start script
 ADD start.sh /tmp/start.sh
 RUN chmod 755 /tmp/start.sh
+RUN chown mumble-server /data
 
 VOLUME ["/data"]
 
